@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<!-write in what we want the screen to say initailly.->
+    <script>
+
+//create a library of words for the computer to pick from
+var wordPool = ["tiger", "lion", "baboon", "gorilla", "orangutang", "giraffe", "zebra", "anaconda", "tarantula", "rhinoceros", "leopard", "panda"];
+
+//have computer randomly pick a word for user to guess
+var word = wordPool[Math.floor(Math.random() * wordPool.length)];
+console.log(word);
+
+//display number of spaces for chosen word
+var wordSpaces = [];
+for (var i = 0; i < word.length; i++) {
+    wordSpaces = ["_"];
+    console.log(wordSpaces)
+}
+
+//create a loop that will allow the user to guess X number of times
+var guesses = 10;
+for (var j = 0; j = 0; j--) {
+     //after each guess decrease j by 1;
+}
+
+//Have the user make a guess
+function onkeyup//??
+
+// check the users guess against letters in the word
+
+
+//If guess is correct have it write to the DOM
+
+/*If guess is incorrect, let the user know to try again., 
+and log incorrect letter to the DOM so the user knows what they have already guessed*/
+
+//once the whole word is guessed, or the number of guess run out, restart the game with a new word.
+
+    </script>
+    
+</body>
+</html>

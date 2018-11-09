@@ -47,9 +47,8 @@ $(document).ready(function() {
             if (userGuess === letters[j]) {
                 wordSpaces[j] = userGuess;
                 $("#letters").html(wordSpaces)
-                return letters[j];
             }
-        if (userGuess === letters[j]) {
+            else {
                 guessTotal--;
                 alreadyGuessed = event.key + " ";
                 $("#guessed").append(alreadyGuessed)

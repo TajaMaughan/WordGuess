@@ -22,9 +22,9 @@
     function numberOfLetters() {
         for (var i = 0; i < word.length; i++) {
             wordSpaces.push("_");
-            console.log(wordSpaces)
             $("#letters").html(wordSpaces);
         }
+        console.log(wordSpaces)
         return wordSpaces;
     };
     //word.split
@@ -47,8 +47,9 @@ $(document).ready(function() {
             if (userGuess === letters[j]) {
                 wordSpaces[j] = userGuess;
                 $("#letters").html(wordSpaces)
+                return letters[j];
             }
-            else {
+        if (userGuess === letters[j]) {
                 guessTotal--;
                 alreadyGuessed = event.key + " ";
                 $("#guessed").append(alreadyGuessed)

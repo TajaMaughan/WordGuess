@@ -5,8 +5,10 @@
     var word = "";
     var wordSpaces = [];
     var letters = [];
-    var guesses = 10;
+    var guessTotal = 10;
     var userGuess;
+    var alreadyGuessed;
+        
     //create a library of words for the computer to pick from
     var wordPool = ["tiger", "lion", "baboon", "gorilla", "orangutang", "giraffe", "zebra", "anaconda", "tarantula", "rhinoceros", "leopard", "panda"];
 
@@ -18,16 +20,16 @@
     };
     //display number of spaces for chosen word
     function numberOfLetters() {
-        wordSpaces = word.length;
-            for (var i = 0; i < word.length; i++) {
-        wordSpaces = ["_ "];
-        $("#letters").append(wordSpaces);
+        for (var i = 0; i < word.length; i++) {
+            wordSpaces.push("_");
+            console.log(wordSpaces)
+            $("#letters").html(wordSpaces);
         }
         return wordSpaces;
     };
     //word.split
     function letterInWord() {
-        letters = word.split("");
+        letters = word.split([""]);
         console.log(letters);
         return letters;
     };
@@ -35,12 +37,7 @@
         //In start function.
 
 
-
-
-
-
-
-function gameStart() {
+$(document).ready(function() {
     randomWord();
     numberOfLetters();
     letterInWord();
@@ -51,10 +48,15 @@ function gameStart() {
                 wordSpaces[j] = userGuess;
                 $("#letters").html(wordSpaces)
             }
+            else {
+                guessTotal--;
+                alreadyGuessed = event.key + " ";
+                $("#guessed").append(alreadyGuessed)
+                $("#guessTotal").html(guessTotal);
+            }
         }
-        return userGuess;
     }
-}
+})
 
     // check the users guess against letters in the word
 

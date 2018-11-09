@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,12 +8,17 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <title>Document</title>
 </head>
-<body>
-<script type="text/javascript" src="assets/hangman.js"></script>
-    <div id="letters">
 
+<body>
+    <script type="text/javascript" src="assets/hangman.js"></script>
+    <div>
+        <div>Wins: <span id="wins"></span></div>
+        <div>Loses: <span id="loses"></span></div>
+        <div>Remaining Guesses: <span id="totalGuesses"></span></div>
+        <div id="letters"></div>
+        <div><span id="guessed">Wrong Guesses: </span></div>
     </div>
 
-    
 </body>
+
 </html>

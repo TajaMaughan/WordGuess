@@ -1,5 +1,3 @@
-
-//USE FUNCTIONS!!
 var wins = 0;
 var loses = 0;
 var word = "";
@@ -7,11 +5,9 @@ var wordSpaces = [];
 var letters = [];
 var guessTotal = 10;
 var userGuess;
-var alreadyGuessed;
-        
+var alreadyGuessed= [];
 //create a library of words for the computer to pick from
 var wordPool = ["tiger", "lion", "baboon", "gorilla", "orangutang", "giraffe", "zebra", "anaconda", "tarantula", "rhinoceros", "leopard", "panda"];
-
 //have computer randomly  pick a word for user to guess
 function randomWord() {
     word = wordPool[Math.floor(Math.random() * wordPool.length)];
@@ -45,10 +41,13 @@ $(document).ready(function() {
 /*If guess is incorrect, log incorrect letter to the DOM 
 so the user knows what they have already guessed*/        
         if (letters.indexOf(userGuess) === -1) {
+            if (alreadyGuessed.indexOf(userGuess) === -1){           
             $("#guessed").append(userGuess);
+            alreadyGuessed.push(userGuess);
 //create a loop that will allow the user to guess incorrectly X number of times            
             guessTotal--;
             $("#totalGuesses").html(guessTotal);
+            }
         } else {
 // check the users guess against letters in the word            
             for (i = 0; i < letters.length; i++) {

@@ -41,20 +41,22 @@ $(document).ready(function() {
     randomWord();
     numberOfLetters();
     letterInWord();
+    $("#totalGuesses").html(guessTotal);
     document.onkeyup = function theGuess(event) {
         var userGuess = event.key;
-        for(j = 0 ; j < letters.length; j++) { 
-            if (userGuess === letters[j]) {              
-                wordSpaces[j] = userGuess;
-                $("#letters").html(wordSpaces)
+        if (letters.indexOf(userGuess) === -1) {
+            $("#guessed").append(userGuess);
+            guessTotal--;
+            $("#totalGuesses").html(guessTotal);
+        } else {
+            for (i = 0; i < letters.length; i++) {
+                if (userGuess === letters[i]) {              
+                    wordSpaces[i] = userGuess;
+                    $("#letters").html(wordSpaces)
+                }
             }
-           else {   
-                guessTotal--;               
-                $("#guessTotal").html(guessTotal);        
-                alreadyGuessed = event.key + " ";
-                $("#guessed").append(alreadyGuessed);
-            }                
-        } 
+        }
+        if 
 
     }
 })

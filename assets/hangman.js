@@ -56,7 +56,14 @@ $(document).ready(function() {
                 }
             }
         }
-        if 
+        if ( guessTotal === 0) {
+            loses++;
+            $("#loses").html(loses);
+        }
+        if (wordSpaces.indexOf("_") === -1) {
+            wins++;
+            $("#wins").html(wins);
+        }
 
     }
 })

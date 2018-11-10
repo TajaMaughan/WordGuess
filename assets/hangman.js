@@ -42,22 +42,23 @@ $(document).ready(function() {
     numberOfLetters();
     letterInWord();
     document.onkeyup = function theGuess(event) {
-        var userGuess = event.key;   
-        for (j = 0; j < letters.length; j++) {
-            if (userGuess === letters[j]) {
+        var userGuess = event.key;
+        for(j = 0 ; j < letters.length; j++) { 
+            if (userGuess === letters[j]) {              
                 wordSpaces[j] = userGuess;
                 $("#letters").html(wordSpaces)
             }
-            else {
-                guessTotal--;
+           else {   
+                guessTotal--;               
+                $("#guessTotal").html(guessTotal);        
                 alreadyGuessed = event.key + " ";
-                $("#guessed").append(alreadyGuessed)
-                $("#guessTotal").html(guessTotal);
-            }
-        }
+                $("#guessed").append(alreadyGuessed);
+            }                
+        } 
+
     }
 })
-
+                
     // check the users guess against letters in the word
 
 

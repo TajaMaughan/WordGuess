@@ -1,0 +1,51 @@
+body {
+    display: flex;
+    background: url("paperAnimals.jpg")
+}
+
+.game {
+    display: relative;
+    justify-items: center;
+    flex-direction: column;
+    background-color: rgb(113, 188, 120, 0.8);
+    width: 90%;
+    padding: 5%;
+    padding-top: 0px;
+    margin: 5%;
+    border-style: ridge;
+    border-color: #324732;
+    border-width: 10px;    
+}
+
+.font {
+    display: flex;
+    justify-content: center;
+    color: #1a1a1a;
+    font-family: kalam, sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+    line-height: 1.5;
+}
+
+.title {
+    font-family: molle, cursive;
+    font-size: 90px;
+    color: #cd3333;
+    background: #cb9d1d;
+    border-color: #324732;
+    border-style: ridge;
+    border-width: 10px;
+}
+
+.letters {
+    display: flex;
+    justify-content: center;
+    letter-spacing: 5px;
+    font-family: kalam, sans-serif;
+    font-weight: bold;
+    font-size: 50px;
+}
+
+.result {
+    font-size: 70px;
+}

@@ -5,20 +5,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="assets/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Kalam:700|Molle:400i" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <title>Document</title>
 </head>
 
 <body>
     <script type="text/javascript" src="assets/hangman.js"></script>
-    <div>
-        <div>Wins: <span id="wins"></span></div>
-        <div>Loses: <span id="loses"></span></div>
-        <div>Remaining Guesses: <span id="totalGuesses"></span></div>
-        <div id="letters"></div>
-        <div><span id="guessed">Wrong Guesses: </span></div>
+    <div class="game">
+        <h1 class="font title">Zoo Animals</h1>
+        <div id="result" class="result font"></div>
+        <div class="wins score font">Wins: <span id="wins"></span></div>
+        <div class="loses score font">Loses: <span id="loses"></span></div>
+        <div class="guesses font">Remaining Guesses: <span id="totalGuesses"></span></div>
+        <div id="letters" class="letters" class="font"></div>
+        <div class="guess font"><span id="guessed">Wrong Guesses: </span></div>
+        <div class="font">Guessed Words: <span id="words"> </span></div>
     </div>
-
 </body>
 
-</html>
+</html

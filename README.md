@@ -1,1 +1,2 @@
 # WordGuess
+Hangman style game.
